@@ -1,3 +1,25 @@
 # 2627_Projet2A_Cansat
 
 Projet Cansat de 2A
+
+
+
+## Partie Info
+
+### Tableau Récapitulatif des connexions entre composants
+
+| Broche STM32 | Signal | Élément / Périphérique | Protocole / Rôle | Adresse I2C |
+| --- | --- | --- | --- | --- |
+| **PA0** | `PWM` | Connecteur Moteur | Sortie PWM (+5V) | — |
+| **PA1** | `MesBat` | Mesure Batterie (Pont diviseur) | Entrée analogique (ADC) | — |
+| **PA2** / **PA3** | `VCP_RX` / `VCP_TX` | ST-LINK / Liaison série (Virtual COM) | UART | — |
+| **PA4** | `INT_IMU` | Centrale Inertielle **BNO055** | Interruption matérielle | **`0x29`** (ou `0x28`) |
+| **PA5** | `INT_BARO` | Capteur de pression **BMP581** | Interruption matérielle | **`0x46`** (ou `0x47`) |
+| **PB0** | `CS_SD` | Port MicroSD (Chip Select) | GPIO / SPI | — |
+| **PB3** | `SPI_SCK` | Port MicroSD (Horloge SPI) | SPI (Horloge) | — |
+| **PB4** | `MISO` | Port MicroSD (Master In Slave Out) | SPI | — |
+| **PB5** | `MOSI` | Port MicroSD (Master Out Slave In) | SPI | — |
+| **PB6** | `SCL` | Bus I2C Commun (**BNO055** & **BMP581**) | I2C (Horloge avec pull-up) | Partagé |
+| **PB7** | `SDA` | Bus I2C Commun (**BNO055** & **BMP581**) | I2C (Données avec pull-up) | Partagé |
+| **PG10** | `NRST` | Bouton de Reset / Réinitialisation | Reset matériel | — |
+| **PA13** / **PA14** | `SWDIO` / `SWCLK` | Connecteur ST-LINK (Debug / Programmation) | SWD | — |
