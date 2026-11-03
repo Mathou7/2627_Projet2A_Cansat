@@ -26,8 +26,6 @@ Projet Cansat de 2A
 
 ## Tableau Récapitulatif du RTOS
 
-Voici le tableau récapitulatif propre en Markdown pour structurer vos tâches FreeRTOS, prêt à être copié-collé :
-
 | Tâche FreeRTOS | Rôle | Périodicité / Déclenchement | Priorité | Taille de Pile |
 | --- | --- | --- | --- | --- |
 | **`SensorTask`** | Acquisition I2C de la centrale BNO055 et du baromètre BMP581 | Périodique rigoureuse (ex: **20 ms / 50 Hz**) | **Haute** (ou *Normal* haute) | 512 mots (*words*) |
