@@ -19,7 +19,17 @@ Projet Cansat de 2A
 | **PB3** | `SPI_SCK` | Port MicroSD (Horloge SPI) | SPI (Horloge) | — |
 | **PB4** | `MISO` | Port MicroSD (Master In Slave Out) | SPI | — |
 | **PB5** | `MOSI` | Port MicroSD (Master Out Slave In) | SPI | — |
-| **PB6** | `SCL` | Bus I2C Commun (**BNO055** & **BMP581**) | I2C (Horloge avec pull-up) | Partagé |
-| **PB7** | `SDA` | Bus I2C Commun (**BNO055** & **BMP581**) | I2C (Données avec pull-up) | Partagé |
+| **PA9** | `SCL` | Bus I2C Commun (**BNO055** & **BMP581**) | I2C (Horloge avec pull-up) | Partagé |
+| **PA8** | `SDA` | Bus I2C Commun (**BNO055** & **BMP581**) | I2C (Données avec pull-up) | Partagé |
 | **PG10** | `NRST` | Bouton de Reset / Réinitialisation | Reset matériel | — |
 | **PA13** / **PA14** | `SWDIO` / `SWCLK` | Connecteur ST-LINK (Debug / Programmation) | SWD | — |
+
+## Tableau Récapitulatif du RTOS
+
+Voici le tableau récapitulatif propre en Markdown pour structurer vos tâches FreeRTOS, prêt à être copié-collé :
+
+| Tâche FreeRTOS | Rôle | Périodicité / Déclenchement | Priorité | Taille de Pile |
+| --- | --- | --- | --- | --- |
+| **`SensorTask`** | Acquisition I2C de la centrale BNO055 et du baromètre BMP581 | Périodique rigoureuse (ex: **20 ms / 50 Hz**) | **Haute** (ou *Normal* haute) | 512 mots (*words*) |
+| **`LoggingTask`** | Enregistrement des données sur la carte MicroSD via le bus SPI | Sur événement (bloquée en attente via une Queue) | **Basse** (*Below Normal*) | 512 mots (*words*) |
+| **`ControlTask`** | Surveillance de la tension batterie (ADC) et gestion de la PWM moteur | Périodique (ex: **100 ms / 10 Hz**) | **Normale** (*Normal*) | 512 mots (*words*) |
