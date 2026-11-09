@@ -2,6 +2,12 @@
 
 Projet Cansat de 2A
 
+## Partie Hardware
+
+### Vue 3D PCB
+
+<img width="1404" height="750" alt="Kicad Cansat" src="https://github.com/user-attachments/assets/86d3e084-7562-488a-bf45-d13ab9730cde" />
+<img width="1404" height="750" alt="Kicad Cansat Back" src="https://github.com/user-attachments/assets/2f273063-0bc7-4840-af53-d6fc44783677" />
 
 
 ## Partie Info
