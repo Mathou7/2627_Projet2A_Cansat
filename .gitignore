@@ -1,0 +1,17 @@
+# Sorties de compilation (régénérées à chaque build)
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+*.su
+*.cyclo
+
+# Réglages propres à ton PC / ton workspace
+.settings/
+*.launch
+.metadata/
