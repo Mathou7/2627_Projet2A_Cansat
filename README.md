@@ -2,6 +2,12 @@
 
 Projet Cansat de 2A
 
+## Partie Hardware
+
+### Vue 3D PCB
+
+<img width="1404" height="750" alt="Kicad Cansat" src="https://github.com/user-attachments/assets/86d3e084-7562-488a-bf45-d13ab9730cde" />
+<img width="1404" height="750" alt="Kicad Cansat Back" src="https://github.com/user-attachments/assets/2f273063-0bc7-4840-af53-d6fc44783677" />
 
 
 ## Partie Info
@@ -31,3 +37,8 @@ Projet Cansat de 2A
 | **`SensorTask`** | Acquisition I2C de la centrale BNO055 et du baromètre BMP581 | Périodique rigoureuse (ex: **20 ms / 50 Hz**) | **Haute** (ou *Normal* haute) | 512 mots (*words*) |
 | **`LoggingTask`** | Enregistrement des données sur la carte MicroSD via le bus SPI | Sur événement (bloquée en attente via une Queue) | **Basse** (*Below Normal*) | 512 mots (*words*) |
 | **`ControlTask`** | Surveillance de la tension batterie (ADC) et gestion de la PWM moteur | Périodique (ex: **100 ms / 10 Hz**) | **Normale** (*Normal*) | 512 mots (*words*) |
+
+## Pinout STM32G431KBT6
+
+<img width="471" height="438" alt="image" src="https://github.com/user-attachments/assets/b827d19e-fbf3-4b9a-b1de-5d058783cfbd" />
+
